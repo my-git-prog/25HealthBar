@@ -1235,8 +1235,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1616367779}
-        m_TargetAssemblyTypeName: Parameter, Assembly-CSharp
-        m_MethodName: ValueMinus
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: TakeDamage
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1373,7 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25bf4eebf96facf418e5318511297109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parameter: {fileID: 1616367779}
+  _health: {fileID: 1616367779}
   _slider: {fileID: 2011462729}
   _smoothSpeed: 0.01
   _smoothDeltaTime: 0.02
@@ -1424,31 +1424,13 @@ GameObject:
   - component: {fileID: 1336673553}
   - component: {fileID: 1336673552}
   - component: {fileID: 1336673551}
-  - component: {fileID: 1336673550}
   m_Layer: 5
-  m_Name: CanvasBars
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1336673550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336673549}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &1336673551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1693,7 +1675,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1616367778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3eaadb45a1c151f4fb30250126ad7c96, type: 3}
+  m_Script: {fileID: 11500000, guid: 98ce4e73e28b8cd448fb6cfa4f3fd82d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _minimumValue: 0
@@ -1900,8 +1882,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1616367779}
-        m_TargetAssemblyTypeName: Parameter, Assembly-CSharp
-        m_MethodName: ValuePlus
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: TakeMedicine
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2301,7 +2283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03866084d5ceaba488306f2f609a2331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parameter: {fileID: 1616367779}
+  _health: {fileID: 1616367779}
   _textMaximumValue: {fileID: 2010497804}
   _textValue: {fileID: 432950369}
 --- !u!1 &2046212863
@@ -2393,7 +2375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0495ef47302fa0d49a0ccad174f90529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _parameter: {fileID: 1616367779}
+  _health: {fileID: 1616367779}
   _slider: {fileID: 419126460}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

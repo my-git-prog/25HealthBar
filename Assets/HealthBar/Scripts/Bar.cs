@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Bar : MonoBehaviour
 {
-    [SerializeField] private Parameter _parameter;
+    [SerializeField] private Health _health;
 
     protected int MaximumValue;
     protected int Value;
@@ -18,20 +18,20 @@ public class Bar : MonoBehaviour
 
     private void OnEnable()
     {
-        _parameter.ValueChanged += SetValue;
+        _health.ValueChanged += SetValue;
     }
     private void OnDisable()
     {
-        _parameter.ValueChanged -= SetValue;
+        _health.ValueChanged -= SetValue;
     }
 
     protected virtual void SetMaximumValue()
     {
-        MaximumValue = _parameter.MaximumValue;
+        MaximumValue = _health.MaximumValue;
     }
 
     protected virtual void SetValue()
     {
-        Value = _parameter.Value;
+        Value = _health.Value;
     }
 }

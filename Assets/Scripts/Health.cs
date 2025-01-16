@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Parameter : MonoBehaviour
+public class Health : MonoBehaviour
 {
     [SerializeField] private int _minimumValue = 0;
     [SerializeField] private int _maximumValue = 100;
@@ -18,15 +18,15 @@ public class Parameter : MonoBehaviour
         _value = _maximumValue;
     }
 
-    public void ValuePlus(int step)
+    public void TakeMedicine(int value)
     {
-        _value = Math.Clamp(_value + step, _minimumValue, _maximumValue);
+        _value = Math.Clamp(_value + value, _minimumValue, _maximumValue);
         ValueChanged?.Invoke();
     }
 
-    public void ValueMinus(int step)
+    public void TakeDamage(int value)
     {
-        _value = Math.Clamp(_value - step, _minimumValue, _maximumValue);
+        _value = Math.Clamp(_value - value, _minimumValue, _maximumValue);
         ValueChanged?.Invoke();
     }
 }
