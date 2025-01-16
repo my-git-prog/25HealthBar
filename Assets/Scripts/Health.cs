@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
         _value = _maximumValue;
     }
 
-    public void TakeMedicine(int value)
+    public void TakeHealing(int value)
     {
         _value = Math.Clamp(_value + value, _minimumValue, _maximumValue);
         ValueChanged?.Invoke();
